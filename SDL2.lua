@@ -1,7 +1,7 @@
 project "SDL2"
 	filter "system:windows"               -- SDL needs to be a DLL on windows for
-		kind          "SharedLib"         -- some reason :)
-		staticruntime "off"
+		kind          "StaticLib"         -- some reason :)
+		staticruntime "on"
 
 	filter "system:macosx"
 		kind          "StaticLib"
