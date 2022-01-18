@@ -22,8 +22,6 @@ project "SDL2"
 		              "NoBufferSecurityCheck"
 	}
 
-	vectorextensions  "SSE"               -- Necessary to run x32.
-
 	location          "%{wks.location}/bin/int/ProjectFiles/%{_ACTION}"
 
     	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
