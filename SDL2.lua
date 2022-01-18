@@ -24,10 +24,10 @@ project "SDL2"
 
 	vectorextensions  "SSE"               -- Necessary to run x32.
 
-	location          "Intermediate/ProjectFiles/%{_ACTION}"
+	location          "%{wks.location}/bin/int/ProjectFiles/%{_ACTION}"
 
-	targetdir         "Binaries/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-	objdir            "Intermediate/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
+    	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+    	objdir ("%{wks.location}/bin/int/" .. outputdir .. "/%{prj.name}")
 
 	includedirs      {"include"}
 
