@@ -39,18 +39,3 @@ project "SDL2main"
 		}
 		runtime      "Release"
 		optimize     "Speed"
-
-
-	filter "configurations:Development"    -- These are the configurations I tend to
-		defines {                          -- use in my projects, but I have added 
-			         "NDEBUG"              -- the default ones anyway.
-		}
-		runtime      "Release"
-		optimize     "On"
-
-	filter "configurations:Ship"
-		defines {
-			         "NDEBUG"
-		}
-		runtime      "Release"
-		optimize     "Speed"
