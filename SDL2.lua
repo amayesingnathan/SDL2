@@ -1,16 +1,7 @@
 project "SDL2"
-	filter "system:windows"               -- SDL needs to be a DLL on windows for
-		kind          "StaticLib"         -- some reason :)
-		staticruntime "on"
+	kind          "StaticLib"
+	staticruntime "on"
 
-	filter "system:macosx"
-		kind          "StaticLib"
-		staticruntime "on"
-
-	filter "system:linux"
-		kind          "StaticLib"
-		staticruntime "on"
-	filter {}
 
 	language          "C++"              -- Some files are C++ files, although they
 	cppdialect        "C++17"            -- are not needed on normal Windows.

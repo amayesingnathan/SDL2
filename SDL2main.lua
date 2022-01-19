@@ -16,7 +16,8 @@ project "SDL2main"
 
 	includedirs     {"include"}
 
-	files           {"src/main/windows/*.c"}	
+	filter "system:windows"
+		files           {"src/main/windows/*.c"}
 
 	systemversion    "latest"
 	defines {
